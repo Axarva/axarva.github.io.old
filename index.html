@@ -39,7 +39,12 @@ layout: default
       </p>
     </div>
   </div>
-
+  <div class="home-section">
+    <h4>Most recent post</h4>
+    {% for post in site.posts limit:1 %}
+      {% include latest-post.html %}
+    {% endfor %}
+  </div>
   <div class="home-section">
     <h2>THE FOUNDERS</h2>
     <p>
