@@ -19,7 +19,7 @@ p {
 .content-container {
     display: flex;
     flex: 1;
-    padding-top: 11vh;
+    padding-top: 10vh;
     width: 100%;
 }
 h3 {
@@ -74,7 +74,7 @@ h2 ~ p {
     background-color: #000;
     text-align: center;
     padding-top: 10px;
-    margin-left: -30px;
+    left: -30px;
 }
 .header-logo:hover,
 .header-logo:active{
@@ -85,7 +85,7 @@ h2 ~ p {
 }
 .header-nav {
     float: right;
-    padding: 5.5vh 60px 1vh 0;
+    padding: 5.5vh 60px 0 0;
 }
 .header-nav>li:first-child a {
     color: #ff4500;
@@ -460,6 +460,67 @@ h2 ~ p {
 @media (max-width: 800px) {
   html {
     box-shadow: none;
+    padding: 0;
+  }
+  /* HEADER STYLES */
+  .header-nav {
+    padding: 1vh 1vh;
+    font-size: 3vw;
+  }
+  .header-logo {
+    left: auto;
+  }
+  .header-nav > li {
+    padding-left: 0;
+  }
+  .header-nav >li ~ li {
+    padding-left: 0.5vh;
+    margin-left: 0.5vh;
+  }
+  /* HOMEPAGE STYLES */
+  .home-callout {
+    flex-direction: column;
+  }
+  .callout-copy {
+    flex: 1;
+  }
+  /* BIO STYLES */
+  .bio-box {
+    float: none;
+    width: auto;
+  }
+  .bio-box h3 {
+    color: black;
+  }
+  /* GALLERY STYLES */
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery .col {
+    padding: 1em;
+  }
+  .gallery .gallery-thumbs {
+    flex: 1;
+    height: auto;
+    white-space: nowrap;
+    width: 100vw;
+  }
+  .gallery-thumbs > div {
+    display: inline-block;
+  }
+  .gallery-thumbs img {
+    height: 7vh;
+    margin: 0 10px 0 0;
+    width: auto;
+  }
+  .gallery .gallery-info {
+    flex: 1;
+  }
+  /* BLOG STYLES */
+  .blog-recent {
+    display: none;
+  }
+  .blog-previews {
     padding: 0;
   }
   .post-aside {
