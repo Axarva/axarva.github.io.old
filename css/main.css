@@ -39,7 +39,8 @@ h4 {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     padding-left: 1em;
 }
-.nav-links a {
+.nav-links a,
+.dropdown-trigger{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -49,13 +50,84 @@ h4 {
 .nav-links a:active {
     color: #ff4500 ;
 }
-/* PARAGRAPH STYLES */
-h2 ~ p {
-    font-size: 0.8em;
-    font-style: italic;
-    margin: auto;
-    max-width: 70%;
-    text-align: center;
+/* * DROPDOWN STYLES */
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .drop-menu {
+  display: block;
+}
+.dropdown:hover .drop-trigger:after {
+  border-color: #ed6e2f transparent transparent;
+}
+.drop-trigger {
+  display: inline-block;
+  padding-right: 1.5em;
+  position: relative;
+}
+.drop-trigger:after {
+  border: 0.3em solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -0.05em;
+  top: 0.55em;
+  width: 0;
+}
+.drop-menu {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  display: none;
+  list-style: none;
+  padding: 1em 0 0;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+}
+.drop-menu:before {
+  border: 0.6em solid;
+  border-color: transparent transparent #333;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 1em;
+  top: -0.1em;
+  width: 0;
+}
+.drop-menu li {
+  background-color: #333;
+}
+.drop-menu li ~ li {
+  border-top: 1px dotted rgba(255 ,255 ,255 ,0.1)
+}
+.drop-menu li:first-child {
+  border-radius: 5px 5px 0 0;
+  color: #999;
+  font-size: 0.6em;
+  padding: 1em 1em 0.25em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.drop-menu li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.drop-menu a {
+  color: #ccc;
+  display: block;
+  font-weight: normal;
+  padding: 0.5em 2em 0.5em 1em;
+  text-align: left;
+  text-transform: none;
+  white-space: nowrap;
+}
+.drop-menu a:hover {
+  background-color: #ccc;
+  color: #000;
+}
+/* HIDE IN THE FOOTER */
+.footer .dropdown:hover .drop-menu,
+.footer .drop-trigger:after {
+  display: none;
 }
 /* HEADER STYLES */
 .header {
@@ -86,6 +158,10 @@ h2 ~ p {
 .header-nav {
     float: right;
     padding: 5.5vh 60px 0 0;
+}
+.header-nav a,
+.drop-trigger {
+  color: #fff;
 }
 .header-nav>li:first-child a {
     color: #ff4500;
