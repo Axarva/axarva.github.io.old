@@ -4,9 +4,9 @@
     <title>Test Page: Don't Panic</title>
 {% endif %}
 {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
+    <meta property="og:description" content="{{ page.description }}">
   {% else %}
-    <meta name="description" content="This is a dangerous site.">
+    <meta property="og:description" content="This is a dangerous site.">
 {% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 <link rel="icon" href="/favicon.png">
