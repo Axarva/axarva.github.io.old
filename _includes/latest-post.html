@@ -3,7 +3,9 @@
       <h2><a href="">{{ post.title }}</a></h2>
       <div class="post-byline">
         <img src=" {{ post.gravatar }}">
-        <a class="social-links" href="{{ post.authorTwitter }}">Tw</a>
+        <a class="social-links" href="{{ post.authorTwitter }}">
+          <i class="fab fa-twitter"></i>
+        </a>
         by: {{ post.author }}
         <span>-{{ post.date | date: '%B %d, %Y'}}</span>
       </div>
